@@ -1,0 +1,24 @@
+1. Giải thích các câu lệnh: git init, git add <file_name>, git add ., git
+commit -m “message”.
+- git init: Câu lệnh khởi tạo thư mục được quản lý bởi git, chỉ chạy 1 lần
+- git add <file_name>: đưa file chỉ định từ vùng Working Directory sang vùng Staging Area
+- git add . : đưa tất cả các file từ vùng Working Directory sang vùng Staging Area 
+- git commit -m “message” : tạo commit với message mô tả ngắn gọn cho commit theo quy tắc commit convention.
+vd: “chore: remove unused file”
+    “feat: add code for exercises 2”
+    "fix: fix bug search function"
+2. Tưởng tượng và gi kết quả
+    a. Tạo 3 files: file1, file2, file3
+        Kết quả: 3 file được tạo trong folder Tests
+    b. Chạy lệnh git init
+        Kết quả: khởi tạo thư mục git và đưa 3 files trên vào vùng Working Directory
+    c. Chạy lệnh git commit -m”init project”
+        Kết quả: Do vùng Staging Area chưa có file nào được add, 
+        nên chạy lệnh này sẽ báo không có file nào để tạo commit
+    d. Chạy lệnh: git add file1
+        Kết quả: Move file1 từ vùng Working Directory sang vùng Staging Area
+    e. Chạy lệnh: git commit -m”add file1”
+        Kết quả: Tạo commit với code file1 và message "add file1", move file 1 sang vùng Repository
+    f. Chạy lệnh: git add file
+        Kết quả: Do chưa có file nào tên file được tạo, nên chạy câu lệnh này sẽ báo không tìm thấy file "file"
+        
