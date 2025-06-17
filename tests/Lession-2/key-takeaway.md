@@ -39,10 +39,10 @@
     3. Thêm file vào Staging area:
         - Thêm 1 file:
             ** git add <tên file> **
-            * Đưa file từ vùng Working directory sang vùng Staging *
+            * Đưa file tạo mới và thay đổi từ vùng Working directory sang vùng Staging *
         - Thêm tất cả các files:
             ** git add . **
-            * Đưa tất cả các file trong Working Directory sang Staging *
+            * Đưa tất cả các file tạo mới và thay đổi trong Working Directory sang Staging *
     4. Commit
         ** git commit -m "message" **
         * Đưa các file từ Staging area lên Repository *
@@ -99,7 +99,7 @@
     - vd: if (5 > 3) { console.log("5 lớn hơn 3")}
 ### Loops vs for
     - Cú pháp:
-   ** for(<khởi tạo>; <điều kiện dừng> <điều kiện tăng>) { // code } **
+   ** for(<khởi tạo>; <điều kiện dừng>; <điều kiện tăng>) { // code } **
     - Dùng để thực hiện 1 đoạn logic 1 số lần nhất định
     - vd: Ví dụ: for (let i = 1; i <= 10; i++) { console.log("Giá trị của i là: ", i);}
 ### Câu lệnh in ra màn hình
