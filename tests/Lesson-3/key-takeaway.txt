@@ -287,3 +287,28 @@ for (let i = 1; i <= 5; i++) {
 }
 // kết quả chỉ in ra 1, khi i = 2 -> thoả mãn điều kiện chia hết cho 2 
 // -> chạy vào câu lệnh break -> thoát luôn vòng lặp -> k làm j tiếp
+
+12. Kiến thức bổ sung tử file bài tập:
+- git checkout <revision> 
+về nhánh commit có commit id là <revision>
+
+- Object với const:
+const student = {“name”: “alex”, “age”: 20}
+student = {“name”: “Nagi”, “age”: 18} // lỗi
+không thể thay thế hoàn toàn 1 object thành object khác,
+nhưng có thể thay đổi 1 thuộc tính trong object const
+VD:
+const student = {“name”: “alex”, “age”: 20}
+student.name = “Nagi”; // Hợp lệ
+
+- Thêm thuộc tính mới vào object:
+vd:
+let bike = {
+make: 'Yamaha',
+model: 'YZF-R3'
+};
+bike.color = “Blue”;
+bike[“price new”] = 100;
+
+- Xoá 1 thuộc tính của object:
+delete bike.model;
