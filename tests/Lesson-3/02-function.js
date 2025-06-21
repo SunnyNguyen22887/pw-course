@@ -22,7 +22,7 @@ function convert(value, type) {
     if (type == "C") {
         let doF = value * 9 / 5 + 32; // đổi C sang F -> nhập C
         console.log("Convert sang do F = ", doF);
-        return doF
+        return doF;
     } else if (type == "F") {
         let doC = (value - 32) * 5 / 9; // đổi F sang C -> nhập F
         console.log("Convert sang do F = ", doC);
@@ -58,13 +58,12 @@ for (i = 0; i < arr.length; i++) {
 }
 
 console.log("-----------bài 4------------");
-var customers = [
+let customers = [
     { name: "Thom", email: "thom.nguyen@piscada.com" },
     { name: "Ha", email: "ha.do@piscada.com" },
     { name: "Nhat Anh", email: "nhatanh.tran@piscada.com" },
     { name: "Trang", email: "thuytrang.nguyen@piscada.com" }
 ];
-console.log(customers[0]["name"]);
 function newCustomer(cusName, newEmail) {
     for (let i = 0; i < customers.length; i++) {
         if (cusName == customers[i]["name"]) {

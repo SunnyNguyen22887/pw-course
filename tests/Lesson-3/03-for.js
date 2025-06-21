@@ -1,4 +1,4 @@
-console.log("----------bài 1-----------")
+console.log("----------bài 1-----------");
 function total(n) {
     let sum = 0;
     for (let i = 1; i <= n; i++) {
@@ -8,7 +8,7 @@ function total(n) {
 }
 console.log(total(100));
 
-console.log("----------bài 2-----------")
+console.log("----------bài 2-----------");
 function table(n) {
     for (let i = 1; i <= 10; i++) {
         console.log(" " + n + " * " + i + " = ", n * i);
@@ -21,7 +21,7 @@ for (let i = 2; i <= 9; i++) {
 }
 
 
-console.log("----------bài 3-----------")
+console.log("----------bài 3-----------");
 var arr = [];
 function arrOdd(n) {
     for (let i = 0; i <= n; i++) {
@@ -35,7 +35,7 @@ function arrOdd(n) {
 }
 console.log(arrOdd(99));
 
-console.log("----------bài 4-----------")
+console.log("----------bài 4-----------");
 const revenue = [
     { month: 1, total: 100 },
     { month: 2, total: 95 },
