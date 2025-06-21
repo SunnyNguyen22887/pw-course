@@ -288,7 +288,7 @@ for (let i = 1; i <= 5; i++) {
 // kết quả chỉ in ra 1, khi i = 2 -> thoả mãn điều kiện chia hết cho 2 
 // -> chạy vào câu lệnh break -> thoát luôn vòng lặp -> k làm j tiếp
 
-12. Kiến thức bổ sung tử file bài tập:
+12. Kiến thức bổ sung từ file bài tập:
 - git checkout <revision> 
 về nhánh commit có commit id là <revision>
 
