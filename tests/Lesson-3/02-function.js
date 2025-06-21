@@ -1,29 +1,41 @@
 console.log("-----------bài 1------------");
+function specialChar(str) {
+    return /[!@#$%^&*(),?":{}|<>]/.test(str);
+}
+function alphabet(str) {
+    return /^[A-Za-z]+$/.test(str);
+}
 function getBMI(w, h) {
-    let bmi = w / (h * h);
+    w = parseFloat(w);
+    h = parseFloat(h);
+    if (specialChar(w) || specialChar(h) || alphabet(w) || alphabet(h)) {
+        console.log(" cân nặng or  chiều cao không hợp lệ ");
+        return null;
+    }
     if (w <= 0 || h <= 0) {
         console.log(" Cân nặng và chiều cao không hợp lệ ");
-    } else
-        if (bmi < 18.5) {
-            console.log(" Thiếu cân ");
-        } else if (bmi < 25) {
-            console.log(" Bình thường ");
-        } else if (bmi < 30) {
-            console.log(" Thừa cân ");
-        } else {
-            console.log(" Béo phì ");
-        }
+    }
+    let bmi = w / (h * h);
+    if (bmi < 18.5) {
+        console.log(" Thiếu cân ");
+    } else if (bmi < 25) {
+        console.log(" Bình thường ");
+    } else if (bmi < 30) {
+        console.log(" Thừa cân ");
+    } else {
+        console.log(" Béo phì ");
+    }
     return bmi;
 }
 getBMI(55, 1.57);
 
 console.log("-----------bài 2------------");
 function convert(value, type) {
-    if (type == "C") {
+    if (type == "C" || type == "c" ) {
         let doF = value * 9 / 5 + 32; // đổi C sang F -> nhập C
         console.log("Convert sang do F = ", doF);
         return doF;
-    } else if (type == "F") {
+    } else if (type == "F" || type == "f") {
         let doC = (value - 32) * 5 / 9; // đổi F sang C -> nhập F
         console.log("Convert sang do F = ", doC);
         return doC;
@@ -31,7 +43,7 @@ function convert(value, type) {
         console.log(" wrong type !");
     }
 }
-convert(50, "F");
+convert(50, "C");
 
 console.log("------------bài 3-----------");
 let arr = [1, 2, 3, 5, 7, 11, 25, 36, 41, 53, 91];
@@ -45,7 +57,6 @@ function NT(a) {
         }
     }
     return true;
-
 }
 
 for (i = 0; i < arr.length; i++) {
