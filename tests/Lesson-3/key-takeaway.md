@@ -312,3 +312,7 @@ bike[“price new”] = 100;
 
 - Xoá 1 thuộc tính của object:
 delete bike.model;
+
+13. Tip đặt tên cho function:
+- Đặt 1 động từ làm tiền tố giúp cho mục đích của hàm trở nên rõ ràng hơn
+- 1  số Verb thường đc sử dụng làm tiền tố cho hàm: get, set, calculate, check, …

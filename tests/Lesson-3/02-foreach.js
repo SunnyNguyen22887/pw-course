@@ -9,34 +9,34 @@ printArr();
 
 console.log("----------bài 2----------");
 let array1 = [1, 3, 31, 91, 46, 5, 6, 7, 8, 2];
-function Tong(sum) {
-    sum = 0;
-    array.forEach((value) => {
-        sum = sum + value;
-    })
-    return sum;
-}
-function Max(max) {
-    max = array1[0];
+function calculateTotal(n) {
+    n = 0;
     array1.forEach((value) => {
-        if (value > max) {
-            max = value
+        n = n + value;
+    })
+    return n;
+}
+function findMax(a) {
+    a = array1[0];
+    array1.forEach((value) => {
+        if (value > a) {
+            a = value
         };
     })
-    return max;
+    return a;
 }
-function Min(min) {
-    min = array1[0];
+function findMin(b) {
+    b = array1[0];
     array1.forEach((value) => {
-        if (value < min) {
-            min = value;
+        if (value < b) {
+            b = value;
         }
     })
-    return min;
+    return b;
 }
-console.log(" Tổng của mảng là " + Tong(array1));
-console.log(" Phần tử lớn nhất của mảng là " + Max(array1));
-console.log(" Phần tử nhỏ nhất của mảng là " + Min(array1));
+console.log(" Tổng của mảng là " + calculateTotal(array1));
+console.log(" Phần tử lớn nhất của mảng là " + findMax(array1));
+console.log(" Phần tử nhỏ nhất của mảng là " + findMin(array1));
 
 console.log("----------bài 3----------");
 let oldArr = [2, 4, 6, 8];
