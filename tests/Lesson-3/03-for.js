@@ -1,15 +1,15 @@
 console.log("----------bài 1-----------");
-function total(n) {
+function calculateTotal(n) {
     let sum = 0;
     for (let i = 1; i <= n; i++) {
-        sum = sum + i;
+        sum += i;
     }
     return sum;
 }
-console.log(total(100));
+console.log(calculateTotal(100));
 
-console.log("----------bài 2-----------");
-function table(n) {
+console.log("----------bài 2 cách 1----------");
+function printMultiplicationTable(n) {
     for (let i = 1; i <= 10; i++) {
         console.log(" " + n + " * " + i + " = ", n * i);
     }
@@ -17,20 +17,32 @@ function table(n) {
 }
 for (let i = 2; i <= 9; i++) {
     console.log(" bảng cửu chương " + i + " ");
-    table(i);
+    printMultiplicationTable(i);
 }
+
+console.log("----------bài 2 cách 2----------");
+function inBangCuuChuong() {
+    for (let i = 2; i <= 9; i++) {
+        console.log(`Bảng cửu chương ${i}:`);
+        for (let j = 1; j <= 10; j++) {
+            console.log(`${i} x ${j} = ${i * j}`);
+        }
+        console.log(""); // Tạo một dòng trống giữa các bảng cửu chương
+    }
+}
+inBangCuuChuong();
 
 
 console.log("----------bài 3-----------");
-var arr = [];
+let array = [];
 function arrOdd(n) {
     for (let i = 0; i <= n; i++) {
         if ((i % 2) === 0) {
             continue;
         }
-        arr.push(i);
+        array.push(i);
     }
-    return n, arr;
+    return n, array;
 
 }
 console.log(arrOdd(99));
@@ -50,13 +62,12 @@ const revenue = [
     { month: 11, total: 85 },
     { month: 12, total: 76 }
 ];
-function Tong(n) {
-    n = 0;
+function totalRevenue(n) {
     for (let i = 0; i < revenue.length; i++) {
         n = n + revenue[i].total;
     }
     return n;
 }
-console.log(Tong(revenue.length));
+console.log(totalRevenue(revenue.length));
 
 

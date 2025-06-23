@@ -7,7 +7,7 @@ for (let i of str1) {
 
 console.log("---------bài 2----------");
 const numberArr = [1, 1, 2, 2, 3, 5, 7, 11, 7];
-function Uniq(arr) {
+function uniqueNumber(arr) {
     for (let [index, value] of arr.entries()) {
         let found = false;
         for (let i = 0; i < arr.length; i++) {
@@ -24,4 +24,4 @@ function Uniq(arr) {
         }
     }
 }
-Uniq(numberArr);
+uniqueNumber(numberArr);

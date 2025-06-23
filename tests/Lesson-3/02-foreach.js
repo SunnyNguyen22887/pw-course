@@ -9,19 +9,21 @@ printArr();
 
 console.log("----------bài 2----------");
 let array1 = [1, 3, 31, 91, 46, 5, 6, 7, 8, 2];
-function calculateTotal(n) {
-    n = 0;
-    array1.forEach((value) => {
+function calculateTotal(arr) {
+    let n = 0;
+    arr.forEach((value) => {
         n = n + value;
     })
     return n;
 }
-function findMax(a) {
-    a = array1[0];
-    array1.forEach((value) => {
+function findMinMax(arr) {
+    let max = array1[0];
+    arr.forEach((value) => {
         if (value > a) {
             a = value
-        };
+        }else if(value < a) {
+            
+        }
     })
     return a;
 }

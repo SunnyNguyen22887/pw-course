@@ -31,7 +31,7 @@ getBMI(55, 1.57);
 
 console.log("-----------bài 2------------");
 function convert(value, type) {
-    if (type == "C" || type == "c" ) {
+    if (type == "C" || type == "c") {
         let doF = value * 9 / 5 + 32; // đổi C sang F -> nhập C
         console.log("Convert sang do F = ", doF);
         return doF;
@@ -46,8 +46,8 @@ function convert(value, type) {
 convert(50, "C");
 
 console.log("------------bài 3-----------");
-let arr = [1, 2, 3, 5, 7, 11, 25, 36, 41, 53, 91];
-function NT(a) {
+const arrayA = [0, 1, 2, 3, 5, 7, 11, 25, 36, 41, 53, 91];
+function isPrime(a) {
     if (a < 2) {
         return false;
     }
@@ -58,15 +58,17 @@ function NT(a) {
     }
     return true;
 }
-
-for (i = 0; i < arr.length; i++) {
-    let n = arr[i];
-    if (NT(n)) {
-        console.log(`${n} là số nguyên tố `);
-    } else {
-        console.log(`${n} không là số nguyên tố `);
+function filterPrimeArr(arr) {
+    const primeArr = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (isPrime(arr[i])) {
+            primeArr.push(arr[i]);
+        }
     }
+    return primeArr;
 }
+console.log(filterPrimeArr(arrayA));
+
 
 console.log("-----------bài 4------------");
 let customers = [
@@ -93,16 +95,16 @@ var students = [
     { name: "Nhat Anh", score: 100 },
     { name: "Trang", score: 90 }
 ];
-function average(tb) {
-    tb1 = 0;
-    for (let i = 0; i < students.length; i++) {
-        tb1 = (tb1 + students[i].score);
-        tb = tb1 / students.length;
+let total = 0;
+function averageGrade(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        total += arr[i].score;
     }
-    return tb;
+    return total / arr.length;
+
 }
 
-console.log(average(students));
+console.log(averageGrade(students));
 
 console.log("----------bài 6-------------");
 function ticketPrice(age) {
