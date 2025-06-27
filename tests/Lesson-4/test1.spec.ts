@@ -33,7 +33,7 @@ test('bài 1', async ({ page }) => {
         await page.locator("//input[@id='dob']").fill('1991-04-12')
     })
     await test.step('Attach profile picture', async () => {
-        await page.locator("//input[@id='profile']").setInputFiles("./images/profile-picture.jpg")
+        await page.locator("//input[@id='profile']").setInputFiles("tests/images/profile-picture.jpg")
     })
     await test.step('Input Biography', async () => {
         await page.locator("//textarea[@id='bio']").fill('automation test k1104, wellcome to my class')
