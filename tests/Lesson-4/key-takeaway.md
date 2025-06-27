@@ -437,7 +437,7 @@ dùng hàm `contains(<giá trị>, <giá trị contains>)` để lấy phần t�
 
 - Confirmation dialog:
 ```javascript
-page.on('dialog', dialog => dialog.accept());
+page.once('dialog', dialog => dialog.accept());
 await page.getByRole('button').click();
 ```
 

@@ -41,8 +41,12 @@ test('bài 1', async ({ page }) => {
 
     await test.step('Slider rating', async () => {
         const box = await page.locator("//input[@id='rating']").boundingBox();
+        if (!box) {
+            throw new Error('Box null');
+        }
         let x = (box.width * 8) / 10;
         let y = (box.height * 8) / 10;
+        
         // { x: 515.59375, y: 442.875, width: 348.875, height: 36 }
         await page.locator("//input[@id='rating']").click({
             position: {
@@ -62,6 +66,9 @@ test('bài 1', async ({ page }) => {
     })
     await test.step('Star rating', async () => {
         const boxRate = await page.locator("//div[@id='starRating']").boundingBox();
+        if (!boxRate) {
+            throw new Error('boxRate null');
+        }
         let x = (boxRate.width / 5) * 4;
         let y = (boxRate.height / 5) * 4;
         await page.locator("//div[@id='starRating']").click({
