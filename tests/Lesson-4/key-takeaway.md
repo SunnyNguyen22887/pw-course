@@ -98,53 +98,43 @@ Có thể hiểu là 1 cây đối tượng (object tree) thể hiện mỗi qua
 3. DOM - Mối quan hệ và quy ước:
 - Self : node hiện tại
 
-![Self](tests\images\node.png)
-
-![Self](D:\playwright\pw-course\tests\images\node.png)
-
-![Self](.\tests\images\node.png)
-
-![Self](./tests/images/node.png)
-
-![Self](tests/images/node.png)
-
-![Self](D:/playwright/pw-course/tests/images/node.png)
+![Self](../images/node.png)
 
 - parent : node cha
 - children : node con
 - ancestor : tổ tiên
 bao gồm node cha, ông, cụ,.., nút gốc (không báo gồm các nút cùng cấp với cha, ông, cụ,...)
 
-![ancestor](<./tests/images/tổ-tiên-ancestor.png>)
+![ancestor](../images/tổ-tiên-ancestor.png)
 
 - descendant : hậu duệ
 Bao gồm con, cháu, chắt của nút hiện tại
 
-![descendant](<./tests/images/hậu-duệ-descendant.png>)
+![descendant](../images/hậu-duệ-descendant.png)
 
 - sibling : anh em  (cùng cha)
 bao gồm anh em đằng trước và anh em đằng sau
 
-![sibling](<./tests/images/anh-em-sibling.png>)
+![sibling](../images/anh-em-sibling.png)
 
 - following : theo sau 
 (gồm các node ở phía bên tay phải của node hiện tại,
  không bao gồm con của node hiện tại)
 
-![following](<./tests/images/theo-sau-following.png>) 
+![following](../images/theo-sau-following.png) 
 
 - preceding : phía trước gồm các node ở phía bên tay trái node hiện tại, trừ các node ancestor
  (tức là lấy các node bên trái là anh em, và cha, ông, con, cháu... của anh em, k bao gồm con của nút hiện tại)
 
-![preceding](<./tests/images/phía-trước-precesding.png>)  
+![preceding](../images/phía-trước-precesding.png)  
 
 - following-sibling: anh em phía sau = following + sibling
 
-![following-sibling](<./tests/images/ae-phía-sau-following-sibling.png>)
+![following-sibling](../images/ae-phía-sau-following-sibling.png)
 
 - preceding-sibling: anh em phía trước = preceding + sibling
 
-![preceding-sibling](<./tests/images/ae-phía-trước-preceding-sibling.png>) 
+![preceding-sibling](../images/ae-phía-trước-preceding-sibling.png) 
 
 II. Selector
 1. Xpath selector
@@ -167,36 +157,36 @@ vd:
 
 `//*[@id='ancestor']`
 
-![wildcard](<./tests/images/wildcard.png>) 
+![wildcard](../images/wildcard.png) 
 
 **Chứa thuộc tính**:
 Lấy phần tử chứa thuộc tính
 
 `//*[@checked]`
 
-![chứa-thuộc-tính](<./tests/images/chứa-thuộc-tính.png>) 
+![chứa-thuộc-tính](../images/chứa-thuộc-tính.png) 
 
 **And và or**:
 Logic giống với toán tử and/or
 
 `//*[@id='parent' or @class='form-group']`
 
-![or](<./tests/images/or.png>) 
+![or](../images/or.png) 
 
-![and](<./tests/images/and.png>) 
+![and](../images/and.png) 
 
 **innerText: text()**:
 
 `//h1[@text()='User Registration']`
 
-![text](<./tests/images/text.png>) 
+![text](../images/text.png) 
 
 **normalize-space()**:
 Dùng cho trường hợp text chứa khoảng space ở đầu cuối
 
 `//h1[@normalize-space()='User Registration']`
 
-![normalize-space](<./tests/images/normalize-space.png>) 
+![normalize-space](../images/normalize-space.png) 
 
 **contains**:
 Chứa chuỗi con
@@ -204,18 +194,18 @@ có thể dùng dc cả cho text và thuộc tính
 
 `//h1[@contains(text(), 'User')]`
 
-![contains-text](<./tests/images/contains-text.png>) 
+![contains-text](../images/contains-text.png) 
 
 `//h1[@contains(@id, 'sel')]` 
 
-![contains-thuộc-tính](<./tests/images/contains-thuộc-tính.png>) 
+![contains-thuộc-tính](../images/contains-thuộc-tính.png) 
 
 **starts-with**:
 Bắt đầu 1 text bằng starts-with
 
 `//h1[starts-with(text(), 'User')]`
 
-![start-with](<./tests/images/start-with.png>) 
+![start-with](../images/start-with.png) 
 
 **not**:
 
@@ -223,7 +213,7 @@ Bắt đầu 1 text bằng starts-with
 
 -> lấy thẻ h1 có id khác `self'
 
-![not](<./tests/images/not.png>)
+![not](../images/not.png)
 
 - Xpath Axes:
 Cú pháp:
@@ -235,35 +225,35 @@ lấy parent của con có id='child', form là tên thẻ cha
 
 `//div[@id='child']/parent::form`
 
-![parent](<./tests/images/parent.png>)
+![parent](../images/parent.png)
 
 **child**:
 Lấy con của thẻ đang đứng
 
 `//div[@id='child']/child::input`
 
-![child](<./tests/images/child.png>)
+![child](../images/child.png)
 
 **ancestor**:
 ancestor là tổ tiên: nút gốc -> nút cụ -> nút ông -> nút cha
 
 `//div[@id='child']/ancestor::*`
 
-![ancestor](<./tests/images/ancestor.png>)
+![ancestor](../images/ancestor.png)
 
 **descendant**:
 Hậu duệ: con, cháu, chắt
 
 `//div[@id='child']/descendant::*`
 
-![descendant](<./tests/images/descendant.png>)
+![descendant](../images/descendant.png)
 
 **following**:
 Các node theo sau, bao gồm cả con cháu của những node sau, trừ con của nó
 
 `//div[@id='child']/following::*`
 
-![following](<./tests/images/following.png>)
+![following](../images/following.png)
 
 **preceding**:
 Các node đi trước, bao gồm con cháu của các node trước, trừ con của nó và các node cha trở lên
@@ -396,7 +386,7 @@ await page.locator("//input").setInputFiles("path_file");
 
 **Bounding box & position**:
 
-![Boundingbox](./images/bounding box.png)
+![Boundingbox](../images/bounding-box.png)
 
 *Lấy tọa độ, kích thước của element*:
 ```javascript
