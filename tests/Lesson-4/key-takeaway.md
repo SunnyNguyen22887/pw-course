@@ -98,7 +98,11 @@ Có thể hiểu là 1 cây đối tượng (object tree) thể hiện mỗi qua
 3. DOM - Mối quan hệ và quy ước:
 - Self : node hiện tại
 
-![Self](<./tests/images/node.png>)
+![Self](tests\images\node.png)
+
+![Self](D:\playwright\pw-course\tests\images\node.png)
+
+![Self](.\tests\images\node.png)
 
 - parent : node cha
 - children : node con
