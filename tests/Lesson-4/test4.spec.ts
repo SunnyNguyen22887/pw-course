@@ -27,17 +27,15 @@ test('Bài 4', async ({ page }) => {
             await page.locator("//textarea[@id='note-content']").fill(dataArray[i].contentArticle)
             await page.locator("//button[@id='add-note']").click();
         }
-
-    })
-
-})
-test('Search', async ({ page }) => {
-    await test.step('search', async () => {
-       
-        const randomIndex = Math.floor(Math.random() * dataArray.length);
-        const randomTitle = dataArray[randomIndex].titleArticle
-        console.log(randomTitle);
-        await page.locator("//input[@id='search']").fill(randomTitle);
+       await test.step('search', async () => {
+            const randomIndex = Math.floor(Math.random() * dataArray.length); 
+            const randomTitle = dataArray[randomIndex].titleArticle;
+            console.log(randomTitle);
+            await page.locator("//input[@id='search']").fill(randomTitle);
+       }) 
     })
 })
+
+   
+
     
