@@ -104,6 +104,12 @@ Có thể hiểu là 1 cây đối tượng (object tree) thể hiện mỗi qua
 
 ![Self](.\tests\images\node.png)
 
+![Self](./tests/images/node.png)
+
+![Self](tests/images/node.png)
+
+![Self](D:/playwright/pw-course/tests/images/node.png)
+
 - parent : node cha
 - children : node con
 - ancestor : tổ tiên
